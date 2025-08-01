@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos/style.css">
+    <link rel="stylesheet" href="estilos/desktop.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>Menu Responsivo</title>
+    
+</head>
+<body>
+    <header>
+        <h1>MENU RESPONSIVO</h1>
+        <i class="material-icons" onclick="clickMenu()">menu</i>
+        <menu id="itens">
+            <ul>
+                <li><a href="#">Opção 1</a></li>
+                <li><a href="#">Opção 2</a></li>
+                <li><a href="#">Opção 3</a></li>
+                <li><a href="#">Opção 4</a></li>
+                <li><a href="#">Opção 5</a></li>
+            </ul>
+        </menu>
+    </header> 
+    
+    <main>
+        <article>
+            <h1>Testando Media Queries</h1>
+            
+            <h2>O QUE SÃO MEDIA QUERIES?</h2> 
+            <p>Media queries são recursos do CSS usados para adaptar o visual de um site de acordo com o tamanho e as características da tela em que ele está sendo exibido. Isso significa que, com media queries, é possível mudar o estilo de um site para que ele fique mais bonito, organizado e fácil de navegar em diferentes dispositivos, como celulares, tablets, computadores e até TVs. <br> Elas funcionam como uma “condição” que o navegador verifica: se a condição for verdadeira, o CSS que está dentro daquela media query será aplicado. Por exemplo, se uma media query estiver configurada para telas com no máximo 600 pixels de largura, as regras dentro dela só serão aplicadas em dispositivos pequenos, como celulares.</p>
+            
+            <h2>BREAKPOINTS MAIS USADOS</h2>
+            <p>Os breakpoints são os tamanhos de tela que os desenvolvedores usam como referência para decidir quando mudar o layout do site com media queries. Eles são chamados assim porque representam o “ponto de corte” entre um tipo de dispositivo e outro. Os breakpoints mais comuns são:</p>
+
+                <ul class="breackpoints">
+                    <li class="infospan">
+                    <span class="titulo">Até 600px:</span>
+                    Normalmente usados para celulares. É onde se faz a maioria das adaptações para telas pequenas, como reduzir fontes, empilhar blocos ou transformar o menu em ícone.</li>
+
+                    <li class="infospan"><span class="titulo">Entre 601px e 1024px:</span> Faixa usada para tablets. O layout precisa ser mais espaçado que no celular, mas ainda não tão largo quanto no computador.</li>
+
+                    <li class="infospan"><span class="titulo">Acima de 1024px:</span> Telas de computadores (desktops e notebooks). Aqui o site geralmente mostra o layout completo, com todos os elementos visíveis.</li>
+
+                    <li class="infospan"><span class="titulo">Acima de 1440px:</span> Telas maiores, como monitores grandes ou TVs. Pode ser usado para aumentar margens, fontes e espaçamentos, se necessário.</li>
+                    <br>
+                </ul>
+            
+            
+            <h2>COMO USAR MEDIA QUERIES NA PRÁTICA?</h2>
+            <p>Na prática, media queries são muito úteis para tornar o site “responsivo”, ou seja, capaz de se adaptar automaticamente ao tamanho da tela do usuário. 
+            <br> Com elas, é possível reorganizar elementos do layout, mudar o tamanho de textos, esconder ou mostrar partes do conteúdo e até trocar imagens para versões menores (mais leves) em celulares. Por exemplo, um menu horizontal que aparece no topo do site no computador pode ser transformado em um menu hambúrguer (aquele ícone com três linhas) no celular, tudo isso controlado por media queries. 
+            <br> Outro exemplo prático é deixar imagens menores no celular para carregar mais rápido e economizar dados. Para isso, o desenvolvedor escreve no CSS uma media query que diz: “se a tela tiver até 600px, aplique este conjunto de estilos”. E dentro desse bloco, ele define como os elementos devem se comportar nessa situação. Isso evita que o usuário precise dar zoom ou role muito para os lados em telas pequenas, deixando a navegação muito mais confortável.
+            </p>
+        </article>
+    </main>
+
+    <!-- JS para o menur hamburguinho funcionar -->
+    <script>
+       function clickMenu() {
+    if (itens.style.display === 'none') {
+        itens.style.display = 'block';
+    } else {
+        itens.style.display = 'none';
+    }   
+}
+    </script>
+
+</body>
+</html>
